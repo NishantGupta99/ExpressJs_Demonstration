@@ -1,4 +1,5 @@
 const express = require('express') // to import express
+const path = require('path') // importing path to attach complex html files to pathways 
 const app = express() // created an object which has express module 
 const port = 3000 // use this to assign port 
 
@@ -6,7 +7,8 @@ app.get('/', (req, res) => { // write the path inside the '/' where you want to 
   res.send('Hello World!')
 })
 app.get('/about', (req, res) => {
-    res.send('This is the about page')
+    //res.send('This is the about page')
+    res.sendFile(path)
   })
 
 app.listen(port, () => {
