@@ -8,7 +8,7 @@ app.get('/', (req, res) => { // write the path inside the '/' where you want to 
 })
 app.get('/about', (req, res) => {
     //res.send('This is the about page')
-    res.sendFile(path)
+    res.sendFile(path.join(__dirname,'index.html'));
   })
 
 app.listen(port, () => {
