@@ -9,7 +9,7 @@ app.get('/', (req, res) => { // write the path inside the '/' where you want to 
 app.get('/about', (req, res) => {
     //res.send('This is the about page')
    //res.sendFile(path.join(__dirname,'index.html'));
-    res.json("Nishant", 21, "male", "Student") // res.json is what we use ot send json files 
+    res.json({"Nishant": 21}) // res.json is what we use ot send json files 
   })
 
 app.listen(port, () => {
