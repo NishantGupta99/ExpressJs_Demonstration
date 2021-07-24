@@ -3,7 +3,9 @@ const path = require('path') // importing path to attach complex html files to p
 const app = express() // created an object which has express module 
 const port = 3000 // use this to assign port 
 
-app.get('/', (req, res) => { // write the path inside the '/' where you want to send whatever the response is
+app.use(express.static(path.join(__dirname,"public")))
+
+app.get('/home', (req, res) => { // write the path inside the '/' where you want to send whatever the response is
   res.send('Hello World!')
 })
 app.get('/about', (req, res) => {
